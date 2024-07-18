@@ -42,6 +42,8 @@ header {
 
 main {
     padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the main content */
 }
 
 .post {
@@ -51,6 +53,9 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
     padding: 1rem;
+    max-width: 800px; /* Set a max-width for the posts */
+    margin-left: auto; /* Center the posts */
+    margin-right: auto; /* Center the posts */
 }
 
 .post-header {
