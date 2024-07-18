@@ -1,114 +1,115 @@
-document.addEventListener('DOMContentLoaded', function () {
-    renderPosts();
-});
+// posts.js
 
-function renderPosts() {
-    const postsContainer = document.getElementById('post-container');
-
-    // Define all posts data, sorted by release date (newest first)
+document.addEventListener('DOMContentLoaded', function() {
     const posts = [
         {
-            title: "My Pride - Funk / Hip Hop Release",
-            date: "20/07/2023",
-            content: "Released on 20th July 2023, 'My Pride' is a funk/hip hop track produced and composed by me. Enjoy the groove and rhythm of this track!",
-            image: "https://img.youtube.com/vi/krnzG84iNCk/hqdefault.jpg",
-            youtubeLink: "https://www.youtube.com/watch?v=krnzG84iNCk",
-            lyricsFile: "my_pride.txt"
-        },
-        {
-            title: "Wake Up",
-            date: "07/06/2023",
-            content: "Released on 7th June 2023, 'Wake Up' is a powerful track that aims to energize and motivate. Check out the video on YouTube!",
-            image: "https://img.youtube.com/vi/GdQij7Ujdfk/hqdefault.jpg",
-            youtubeLink: "https://www.youtube.com/watch?v=GdQij7Ujdfk",
-            lyricsFile: "wake_up.txt"
-        },
-        {
-            title: "Dreams",
-            date: "18/05/2023",
-            content: "Released on 18th May 2023, 'Dreams' reflects my thoughts and wishes about the future. Dive into the music and enjoy the journey!",
-            image: "https://img.youtube.com/vi/1Xar0OYM0ps/hqdefault.jpg",
-            youtubeLink: "https://www.youtube.com/watch?v=1Xar0OYM0ps",
-            lyricsFile: "dreams.txt"
-        },
-        {
-            title: "The Way You Love Me",
-            date: "14/02/2023",
-            content: "Released on 14th February 2023, 'The Way You Love Me' is a heartfelt song about how my wife loves me. Everything produced and composed by me.",
-            image: "https://img.youtube.com/vi/qFFMeErXhnw/hqdefault.jpg",
-            youtubeLink: "https://www.youtube.com/watch?v=qFFMeErXhnw",
-            lyricsFile: "the_way_you_love_me.txt"
-        },
-        {
-            title: "Island Fever",
-            date: "12/01/2023",
-            content: "Released on 12th January 2023, 'Island Fever' is a tribute to my love for Bohol, Philippines. Let the tropical vibes take you away!",
-            image: "https://img.youtube.com/vi/bQtkQZUoduU/hqdefault.jpg",
-            youtubeLink: "https://www.youtube.com/watch?v=bQtkQZUoduU",
-            lyricsFile: "island_fever.txt"
+            title: "Welcome to DetraMusic",
+            date: "18/07/2024",
+            description: "Welcome to DetraMusic - your source for the latest music trends and hits. Stay tuned for updates!",
+            image: "images/DetraMusic_37.png",
+            lyricsFile: null
         },
         {
             title: "What's the Difference",
-            date: "17/04/2023",
-            content: "Released on 17th April 2023, 'What's the Difference' explores different perspectives through music. Enjoy the track and see the difference for yourself!",
-            image: "https://img.youtube.com/vi/kG6ud1-ZEwQ/hqdefault.jpg",
-            youtubeLink: "https://www.youtube.com/watch?v=kG6ud1-ZEwQ",
-            lyricsFile: "whats_the_difference.txt"
+            date: "2023-04-17",
+            description: "The song 'What's the Difference' explores the nuances of everyday choices and their impacts. Everything produced and composed by me.",
+            image: "https://img.youtube.com/vi/kG6ud1-ZEwQ/maxresdefault.jpg",
+            lyricsFile: "lyrics/whats_the_difference.txt",
+            link: "https://www.youtube.com/watch?v=kG6ud1-ZEwQ"
+        },
+        {
+            title: "Invest In Me",
+            date: "2023-03-17",
+            description: "One of my favorite songs, 'Invest In Me' was entirely produced and composed by me, with live bass performance.",
+            image: "https://img.youtube.com/vi/7INxIoq-YnQ/maxresdefault.jpg",
+            lyricsFile: "lyrics/invest_in_me.txt",
+            link: "https://www.youtube.com/watch?v=7INxIoq-YnQ"
+        },
+        {
+            title: "My Pride",
+            date: "2023-07-20",
+            description: "A funk/hip hop track, 'My Pride' showcases my production and compositional skills.",
+            image: "https://img.youtube.com/vi/krnzG84iNCk/maxresdefault.jpg",
+            lyricsFile: "lyrics/my_pride.txt",
+            link: "https://www.youtube.com/watch?v=krnzG84iNCk"
+        },
+        {
+            title: "Island Fever",
+            date: "2023-01-12",
+            description: "This song expresses my love for Bohol, Philippines.",
+            image: "https://img.youtube.com/vi/bQtkQZUoduU/maxresdefault.jpg",
+            lyricsFile: "lyrics/island_fever.txt",
+            link: "https://www.youtube.com/watch?v=bQtkQZUoduU"
+        },
+        {
+            title: "Wake Up",
+            date: "2023-06-07",
+            description: "The song 'Wake Up' aims to inspire and energize listeners. Everything produced and composed by me.",
+            image: "https://img.youtube.com/vi/GdQij7Ujdfk/maxresdefault.jpg",
+            lyricsFile: "lyrics/wake_up.txt",
+            link: "https://www.youtube.com/watch?v=GdQij7Ujdfk"
+        },
+        {
+            title: "The Way You Love Me",
+            date: "2023-02-14",
+            description: "A heartfelt song about the way my wife loves me. Everything produced and composed by me.",
+            image: "https://img.youtube.com/vi/qFFMeErXhnw/maxresdefault.jpg",
+            lyricsFile: "lyrics/the_way_you_love_me.txt",
+            link: "https://www.youtube.com/watch?v=qFFMeErXhnw"
+        },
+        {
+            title: "Dreams",
+            date: "2023-05-18",
+            description: "A reflective song about wishing to see into the future and whether I'll make it.",
+            image: "https://img.youtube.com/vi/1Xar0OYM0ps/maxresdefault.jpg",
+            lyricsFile: "lyrics/dreams.txt",
+            link: "https://www.youtube.com/watch?v=1Xar0OYM0ps"
         }
     ];
 
-    // Generate HTML for each post
-    let postsHTML = posts.map(post => `
-        <div class="post ${post.highlight ? 'post-highlight' : ''}" data-lyrics="${post.lyricsFile}">
+    const postContainer = document.getElementById('post-container');
+
+    posts.forEach(post => {
+        const postElement = document.createElement('div');
+        postElement.classList.add('post');
+
+        postElement.innerHTML = `
             <div class="post-header">
-                <div>
-                    <h2>${post.title}</h2>
-                    <p>${post.content}</p>
+                <img src="${post.image}" alt="${post.title}" class="post-thumbnail" />
+                <div class="post-info">
+                    <h3 class="post-title">${post.title}</h3>
+                    <p class="post-date">Posted on ${post.date}</p>
                 </div>
-                <img class="youtube-thumbnail" src="${post.image}" alt="${post.title}">
             </div>
-            <div class="post-date">Posted on ${post.date}</div>
-            ${post.youtubeLink ? `<a href="${post.youtubeLink}" target="_blank">Watch on YouTube</a>` : ''}
-        </div>
-    `).join('');
+            <div class="post-body">
+                <p>${post.description}</p>
+                ${post.lyricsFile ? `<button class="lyrics-button" data-file="${post.lyricsFile}">Show Lyrics</button>` : ''}
+                ${post.link ? `<a href="${post.link}" class="post-link" target="_blank">Listen on YouTube</a>` : ''}
+                <div class="lyrics-container" id="lyrics-${post.title.replace(/ /g, '_')}"></div>
+            </div>
+        `;
 
-    // Append posts to the posts container
-    postsContainer.innerHTML = postsHTML;
+        postContainer.appendChild(postElement);
 
-    // Add click event listeners to load lyrics on post click
-    document.querySelectorAll('.post').forEach(post => {
-        post.addEventListener('click', function () {
-            loadLyrics(this);
-        });
-    });
-}
-
-// Function to load lyrics for a post
-function loadLyrics(postElement) {
-    const lyricsFile = postElement.getAttribute('data-lyrics');
-    if (lyricsFile) {
-        fetch(`lyrics/${lyricsFile}`)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.text();
-            })
-            .then(lyrics => {
-                // Check if the post already has lyrics to remove the existing ones
-                const existingLyrics = postElement.querySelector('.lyrics');
-                if (existingLyrics) {
-                    existingLyrics.remove();
-                }
-
-                // Create and append lyrics container
-                const lyricsContainer = document.createElement('div');
-                lyricsContainer.className = 'lyrics';
-                lyricsContainer.innerHTML = `<h3>Lyrics</h3><pre>${lyrics}</pre>`;
-                postElement.appendChild(lyricsContainer);
-            })
-            .catch(err => {
-                console.error('Error loading lyrics:', err);
+        // Event listener for showing lyrics
+        const lyricsButton = postElement.querySelector('.lyrics-button');
+        if (lyricsButton) {
+            lyricsButton.addEventListener('click', function() {
+                const file = this.getAttribute('data-file');
+                const lyricsContainer = this.nextElementSibling;
+                loadLyrics(file, lyricsContainer);
             });
+        }
+    });
+});
+
+async function loadLyrics(file, container) {
+    try {
+        const response = await fetch(file);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const lyrics = await response.text();
+        container.innerHTML = `<pre>${lyrics}</pre>`;
+    } catch (error) {
+        container.innerHTML = `<p>Error loading lyrics: ${error.message}</p>`;
     }
 }
