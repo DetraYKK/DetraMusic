@@ -59,7 +59,7 @@ main {
 }
 
 .post-thumbnail {
-    width: 120px;
+    width: 100px; /* Adjusted size */
     height: auto;
     margin-right: 1rem;
 }

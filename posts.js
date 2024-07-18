@@ -97,7 +97,11 @@ document.addEventListener('DOMContentLoaded', function() {
             lyricsButton.addEventListener('click', function() {
                 const file = this.getAttribute('data-file');
                 const lyricsContainer = this.nextElementSibling;
-                loadLyrics(file, lyricsContainer);
+                if (lyricsContainer.innerHTML === '') {
+                    loadLyrics(file, lyricsContainer);
+                } else {
+                    lyricsContainer.innerHTML = ''; // Toggle off
+                }
             });
         }
     });
