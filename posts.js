@@ -80,6 +80,7 @@ function renderPosts() {
                 <p>${post.description}</p>
                 <a href="${post.videoUrl}" target="_blank" class="post-link">Watch on YouTube</a>
                 <button class="lyrics-button" data-lyrics-file="${post.lyricsFile}">Show Lyrics</button>
+                <button class="hide-lyrics-button" style="display: none;">Hide Lyrics</button>
                 <div class="lyrics-container" id="lyrics-${post.title.replace(/\s+/g, '-')}"></div>
             </div>
         `;
@@ -92,8 +93,10 @@ function renderPosts() {
         button.addEventListener('click', async (e) => {
             const button = e.target;
             const lyricsFile = button.getAttribute('data-lyrics-file');
-            const lyricsContainer = document.getElementById(`lyrics-${button.closest('.post').querySelector('.post-title').textContent.replace(/\s+/g, '-')}`);
-            
+            const postElement = button.closest('.post');
+            const lyricsContainer = postElement.querySelector('.lyrics-container');
+            const hideButton = postElement.querySelector('.hide-lyrics-button');
+
             try {
                 const response = await fetch(`lyrics/${lyricsFile}`);
                 
@@ -105,11 +108,26 @@ function renderPosts() {
                 lyricsContainer.innerHTML = `<pre>${lyrics}</pre>`;
                 lyricsContainer.style.display = 'block';
                 button.style.display = 'none';
+                hideButton.style.display = 'block';
             } catch (error) {
                 lyricsContainer.innerHTML = '<p>No lyrics have been added yet.</p>';
                 lyricsContainer.style.display = 'block';
                 button.style.display = 'none';
+                hideButton.style.display = 'block';
             }
+        });
+    });
+
+    document.querySelectorAll('.hide-lyrics-button').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const button = e.target;
+            const postElement = button.closest('.post');
+            const lyricsContainer = postElement.querySelector('.lyrics-container');
+            const showButton = postElement.querySelector('.lyrics-button');
+
+            lyricsContainer.style.display = 'none';
+            button.style.display = 'none';
+            showButton.style.display = 'block';
         });
     });
 }
