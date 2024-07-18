@@ -1,41 +1,34 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2709
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+Chorus:
+I wish that I could take a peak
+Into my own future
+I wish to know if I get what I seek
+If my dreams come true
+I wish that I could take a peak
+Into my own future
+I wish to know if I get what I seek
+If my dreams will come true
 
-\f0\fs24 \cf0 Chorus:\
-I wish that I could take a peak/\
-Into my own future/\
-I wish to know if I get what I seek/\
-If my dreams come true/\
-I wish that I could take a peak/\
-Into my own future/\
-I wish to know if I get what I seek/\
-If my dreams will come true/\
-\
-Verse 1:\
-Yeah, I often sit and wonder what my future holds/\
-It\'92s like this empty space inside o\'92 me I wish that I could see/\
-I\'92m workin so damn hard/\
-It would be nice to know where I\'92m going and if my dreams are comin\
-true/\
-Another day has come and another night has been/\
-Everythin is so damn fuzzy, what will the future bring/\
-Will the sun be shinin brightly down on me/\
-Will I be headin to the top and get the crown on me/\
-Will I be ridin around in limousines with ma own driver/\
-With a martini in my hand and all the shrimp I can eat/\
-Will I be livin in a house with my own swimmin pool/\
-Near the beach, with a chance of playin volley ball/\
-\
-Chorus:\
-I wish that I could take a peak/\
-Into my own future/\
-I wish to know if I get what I seek/\
-If my dreams come true/\
-I wish that I could take a peak/\
-Into my own future/\
-I wish to know if I get what I seek/\
-If my dreams will come true/}
+Verse 1:
+Yeah, I often sit and wonder what my future holds
+It's like this empty space inside of me I wish that I could see
+I'm workin so damn hard
+It would be nice to know where I'm going and if my dreams are coming true
+
+Another day has come and another night has been
+Everythin is so damn fuzzy, what will the future bring
+Will the sun be shinin brightly down on me
+Will I be headin to the top and get the crown on me
+Will I be ridin around in limousines with ma own driver
+With a martini in my hand and all the shrimp I can eat
+Will I be livin in a house with my own swimmin pool
+Near the beach, with a chance of playin volley ball
+
+Chorus:
+I wish that I could take a peak
+Into my own future
+I wish to know if I get what I seek
+If my dreams come true
+I wish that I could take a peak
+Into my own future
+I wish to know if I get what I seek
+If my dreams will come true}
