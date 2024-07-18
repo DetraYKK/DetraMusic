@@ -2,6 +2,24 @@
 
 // Sample posts data
 const posts = [
+    // Welcome post
+    {
+        title: "Welcome to DetraMusic",
+        date: "2024-07-18",
+        description: "Welcome to DetraMusic - your source for the latest music trends and hits. Stay tuned for updates!",
+        thumbnail: "images/DetraMusic_37.png",
+        videoUrl: "#", // No video URL for the welcome post
+        lyricsFile: "" // No lyrics file for the welcome post
+    },
+    // Other posts sorted by release date
+    {
+        title: "My Pride",
+        date: "2023-07-20",
+        description: "A funk/hip-hop song with all production and composition by me.",
+        thumbnail: "https://img.youtube.com/vi/krnzG84iNCk/hqdefault.jpg",
+        videoUrl: "https://www.youtube.com/watch?v=krnzG84iNCk&t=1s",
+        lyricsFile: "my-pride.txt"
+    },
     {
         title: "Wake Up",
         date: "2023-06-07",
@@ -11,28 +29,12 @@ const posts = [
         lyricsFile: "wake-up.txt"
     },
     {
-        title: "The Way You Love Me",
-        date: "2023-02-14",
-        description: "A heartfelt song about the way my wife loves me.",
-        thumbnail: "https://img.youtube.com/vi/qFFMeErXhnw/hqdefault.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=qFFMeErXhnw",
-        lyricsFile: "the-way-you-love-me.txt"
-    },
-    {
         title: "Dreams",
         date: "2023-05-18",
         description: "A song reflecting on my hopes and dreams about the future.",
         thumbnail: "https://img.youtube.com/vi/1Xar0OYM0ps/hqdefault.jpg",
         videoUrl: "https://www.youtube.com/watch?v=1Xar0OYM0ps&t=5s",
         lyricsFile: "dreams.txt"
-    },
-    {
-        title: "Island Fever",
-        date: "2023-01-12",
-        description: "A song expressing my love for Bohol, Philippines.",
-        thumbnail: "https://img.youtube.com/vi/bQtkQZUoduU/hqdefault.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=bQtkQZUoduU",
-        lyricsFile: "island-fever.txt"
     },
     {
         title: "What's the Difference",
@@ -51,18 +53,30 @@ const posts = [
         lyricsFile: "invest-in-me.txt"
     },
     {
-        title: "My Pride",
-        date: "2023-07-20",
-        description: "A funk/hip-hop song with all production and composition by me.",
-        thumbnail: "https://img.youtube.com/vi/krnzG84iNCk/hqdefault.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=krnzG84iNCk&t=1s",
-        lyricsFile: "my-pride.txt"
+        title: "The Way You Love Me",
+        date: "2023-02-14",
+        description: "A heartfelt song about the way my wife loves me.",
+        thumbnail: "https://img.youtube.com/vi/qFFMeErXhnw/hqdefault.jpg",
+        videoUrl: "https://www.youtube.com/watch?v=qFFMeErXhnw",
+        lyricsFile: "the-way-you-love-me.txt"
+    },
+    {
+        title: "Island Fever",
+        date: "2023-01-12",
+        description: "A song expressing my love for Bohol, Philippines.",
+        thumbnail: "https://img.youtube.com/vi/bQtkQZUoduU/hqdefault.jpg",
+        videoUrl: "https://www.youtube.com/watch?v=bQtkQZUoduU",
+        lyricsFile: "island-fever.txt"
     }
 ];
 
 // Function to render posts
 function renderPosts() {
     const postContainer = document.getElementById('post-container');
+
+    // Ensure the Welcome post is always first
+    const welcomePost = posts.shift(); // Remove the first post
+    posts.unshift(welcomePost); // Add it back to the start
 
     posts.forEach(post => {
         const postElement = document.createElement('div');
@@ -79,7 +93,7 @@ function renderPosts() {
             <div class="post-body">
                 <p>${post.description}</p>
                 <a href="${post.videoUrl}" target="_blank" class="post-link">Watch on YouTube</a>
-                <button class="lyrics-button" data-lyrics-file="${post.lyricsFile}">Show Lyrics</button>
+                ${post.lyricsFile ? `<button class="lyrics-button" data-lyrics-file="${post.lyricsFile}">Show Lyrics</button>` : ''}
                 <button class="hide-lyrics-button" style="display: none;">Hide Lyrics</button>
                 <div class="lyrics-container" id="lyrics-${post.title.replace(/\s+/g, '-')}"></div>
             </div>

@@ -5,14 +5,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     background-color: #f4f4f4; /* Slight grey background */
 }
 
+/* Header */
 header {
     background-color: #333;
     color: #fff;
-    padding: 1rem 0;
+    padding: 10px 0;
+    text-align: center;
 }
 
 .nav {
@@ -21,46 +22,64 @@ header {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 20px;
 }
 
 .logo-text {
-    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
     font-weight: bold;
 }
 
 .nav-links {
     list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    gap: 1rem;
+}
+
+.nav-links li {
+    margin: 0 10px;
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
+    font-size: 18px;
 }
 
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
 main {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto; /* Center the main content */
+    padding: 20px;
 }
 
-.post-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.section {
+    margin: 20px 0;
 }
 
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Posts */
 .post {
-    background: #fff;
+    background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-    padding: 1rem;
-    max-width: 800px; /* Set a max-width for the posts */
-    width: 100%; /* Ensure the post does not exceed the max-width */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.post:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .post-header {
@@ -69,9 +88,9 @@ main {
 }
 
 .post-thumbnail {
-    width: 100px; /* Adjusted size */
+    width: 100px;
     height: auto;
-    margin-right: 1rem;
+    margin-right: 15px;
 }
 
 .post-info {
@@ -80,44 +99,21 @@ main {
 
 .post-title {
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 22px;
 }
 
 .post-date {
-    color: #777;
+    color: #666;
 }
 
 .post-body {
-    margin-top: 1rem;
-}
-
-.lyrics-button {
-    background-color: #ff6600;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 1rem;
-}
-
-.lyrics-button:hover {
-    background-color: #e65c00;
-}
-
-.lyrics-container {
-    margin-top: 1rem;
-    display: none; /* Hidden by default */
-}
-
-.lyrics-container pre {
-    white-space: pre-wrap; /* Preserve line breaks */
+    margin-top: 10px;
 }
 
 .post-link {
-    display: block;
-    margin-top: 1rem;
-    color: #ff6600;
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
     text-decoration: none;
 }
 
@@ -125,9 +121,53 @@ main {
     text-decoration: underline;
 }
 
+/* Lyrics */
+.lyrics-container {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.lyrics-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.lyrics-button:hover {
+    background-color: #0056b3;
+}
+
+.hide-lyrics-button {
+    display: none;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hide-lyrics-button:hover {
+    background-color: #5a6268;
+}
+
+/* Footer */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
