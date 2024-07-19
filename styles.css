@@ -26,11 +26,9 @@ header {
     padding: 0 20px;
 }
 
-.logo-text {
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
+.logo img {
+    height: 40px; /* Adjust based on your image size */
+    vertical-align: middle;
 }
 
 .nav-links {
