@@ -10,7 +10,9 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-image: url('images/topbg.png');
+    background-size: cover;
+    background-position: center;
     color: #fff;
     padding: 10px 0;
     width: 100%;
@@ -24,11 +26,6 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-.logo img {
-    height: 100px; /* Adjust based on your image size */
-    vertical-align: middle;
 }
 
 .nav-links {
