@@ -1,19 +1,19 @@
-/* styles.css */
-
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Slight grey background */
+    background-color: #f2f2f2;
 }
 
-/* Header */
 header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
-    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .nav {
@@ -33,14 +33,14 @@ header {
 }
 
 .nav-links {
-    list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
 .nav-links li {
-    margin: 0 10px;
+    margin-left: 20px;
 }
 
 .nav-links a {
@@ -53,121 +53,83 @@ header {
     text-decoration: underline;
 }
 
-/* Main Content */
 main {
-    padding: 20px;
-}
-
-.section {
-    margin: 20px 0;
-}
-
-.content {
     max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Posts */
-.post {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    margin: 20px auto;
     padding: 20px;
-    transition: box-shadow 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-.post:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-
-.post-header {
-    display: flex;
-    align-items: center;
-}
-
-.post-thumbnail {
-    width: 100px;
-    height: auto;
-    margin-right: 15px;
-}
-
-.post-info {
-    flex: 1;
-}
-
-.post-title {
-    margin: 0;
-    font-size: 22px;
-}
-
-.post-date {
-    color: #666;
-}
-
-.post-body {
-    margin-top: 10px;
-}
-
-.post-link {
-    display: inline-block;
-    margin-top: 10px;
-    color: #007bff;
-    text-decoration: none;
-}
-
-.post-link:hover {
-    text-decoration: underline;
-}
-
-/* Lyrics */
-.lyrics-container {
-    display: none;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.lyrics-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.lyrics-button:hover {
-    background-color: #0056b3;
-}
-
-.hide-lyrics-button {
-    display: none;
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #6c757d;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.hide-lyrics-button:hover {
-    background-color: #5a6268;
-}
-
-/* Footer */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+.content {
+    margin: 20px 0;
+}
+
+.post {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+}
+
+.post img {
+    max-width: 100px;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+.post h2 {
+    margin-top: 0;
+}
+
+.post .post-date {
+    color: #888;
+    font-size: 14px;
+}
+
+.post .post-actions {
+    margin-top: 10px;
+}
+
+.post .post-actions button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.post .post-actions button:hover {
+    background-color: #555;
+}
+
+/* Highlight Welcome Post */
+.welcome-post {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.lyrics-content {
+    margin-top: 10px;
+    display: none;
+}
+
+.separator {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
 }
