@@ -11,27 +11,46 @@ body {
 
 header {
     background-image: url('images/topbg.png');
-    background-size: cover;
+    background-size: contain; /* Ensure the background image covers the header */
     background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-origin: initial;
     color: #fff;
-    padding: 10px 0;
+    padding: 125px 0; /* Padding adjusted to create space for the menu below */
     width: 100%;
     z-index: 1000;
+    position: absolute; /* Make sure positioning is relative for internal elements */
+}
+
+header::after {
+    content: '';
+    display: block;
+    height: 50px; /* Height of the space reserved for the navigation menu */
+    background-color: black; /* Background color matching the header */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center the navigation menu */
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    position: absolute;
+    z-index: 2; /* Make sure the menu is on top of the pseudo-element */
 }
 
 .nav-links {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    text-align: center;
+    margin: 300;
+    padding: 90px 400px;
     display: flex;
 }
 
